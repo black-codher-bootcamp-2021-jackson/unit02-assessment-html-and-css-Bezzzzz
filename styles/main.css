@@ -1,3 +1,153 @@
+/*To do:
+-add media responsive @media
+-import a css from google 
+-try fix up the timeline
+-add some animation 
+*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Dosis:500); /*change this to henny penny- match favicon font*/
+
+
+/*background for whole page*/
+body{
+  background: rgb(243, 201, 206);
+  color:#000; 
+}
+
+
+/*headings*/
 h1{
-text-align: center;
+    text-align:center;
+}
+h2{
+    text-align: center;
+}
+h4{
+    text-decoration: underline;
+    text-decoration-color: #000;
+    
+}
+
+
+/* My journey*/
+.journey{
+    text-align: left;
+    
+}
+
+
+/*Contact me images css*/
+.social {
+    width: 3%;
+    height: auto;
+}
+
+.table {
+    display: table;
+    margin: 0 auto;
+}
+.social-media li{
+    display: inline;
+    min-width: 696px;
+	list-style: none;
+	padding-top: 20px
+}
+
+/*profile picture css*/
+.profile-img {
+    width: 330px;
+	height: 380px;
+	border-radius: 50%;
+    border-style: dashed;
+    border-color: #4caf50;
+    position: relative;
+    display: inline-block;
+    
+}
+/*About me section */
+.about {
+    position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 80px;
+        top: 40%; 
+        text-align: left;
+        width: 40%;
+}
+
+
+/*timeline section*/
+
+
+
+
+
+.container{
+  width: 1200px;
+  margin: 200px auto;
+}
+
+.timeline{
+  counter-reset: year 2013;
+  position: relative;
+}
+
+.timeline li{
+  list-style-type: none;
+  float: left;
+  width: 33.33%;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  font-family: 'Dosis', sans-serif;
+}
+
+ul:nth-child(1){
+  color: #4caf50;
+}
+
+.timeline li:before{
+  counter-increment: year;
+  content: counter(year);
+  width: 50px;
+  height: 50px;
+  border: 3px dashed #4caf50;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto 10px auto;
+  background: rgb(225, 193, 243); 
+  color: #000;
+  transition: all ease-in-out .3s;
+  cursor: pointer;
+}
+
+.timeline li:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+  top: 25px;
+  left: -45%;
+  z-index: -600;
+  transition: all ease-in-out .3s;
+}
+
+.timeline li:first-child:after{
+  content: none;
+}
+.timeline li.active{
+  color: #4caf50;
+}
+.timeline li.active:before{
+  background:rgb(225, 193, 243); 
+  color: #0d0e0d;
+}
+
+.timeline li.active + li:after{
+  background: #1e201f;
 }
