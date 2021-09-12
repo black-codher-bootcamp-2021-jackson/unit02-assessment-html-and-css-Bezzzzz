@@ -15,92 +15,92 @@
 /*background for whole page*/
 @media (min-width: 480px) {
     body {
-  background: rgb(243, 201, 206);
-  color:#000; 
-  display: grid;
-}
+        background: rgb(243, 201, 206);
+        color:#000; 
+        display: grid;
+    }
 
 
-/*headings*/
-h1 {
-    text-align: center;
-    font-family: "Henny Penny";
-    font-size: 400%; 
-}
+    /*headings*/
+    h1 {
+        text-align: center;
+        font-family: "Henny Penny";
+        font-size: 400%; 
+    }
 
-h2 {
-    text-align: center;
-    font-size: 250%;
-}
+    h2 {
+        text-align: center;
+        font-size: 250%;
+    }
 
-h4 {
-    text-decoration: underline;
-    text-decoration-color: #000;
-    
-}
-h5{
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: #000;
-}
+    h4 {
+        text-decoration: underline;
+        text-decoration-color: #000;
+        
+    }
+    h5{
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: #000;
+    }
 
-header{
-    background-color: #4caf50;
-}
-
-
-/*Contact me images css*/
-.social {
-    width: 3%;
-    height: auto;
-}
+    header{
+        background-color: #4caf50;
+    }
 
 
-.table {
-    margin: auto;
-    background-color: #4caf50;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-}
-.social-media li{
-    display: inline;
-    min-width: 696px;
-	list-style: none;
-	padding-top: 10px
-    
-}
-.bottom{
-    text-align: center;
-}
+    /*Contact me images css*/
+    .social {
+        width: 3%;
+        height: auto;
+    }
 
-/*profile picture css*/
-.profile-img {
-    width: 330px;
-	height: 380px;
-	border-radius: 30%;
-    border-style: dashed;
-    border-color: #4caf50;
-    position: relative;
-    display: inline-block; 
-}
 
-.gif {
-    position:relative;
-    display: inline-block;
-    left: 43%;
-    bottom: 140px;
-    border-radius: 30%;
-    border-style: dashed;
-    border-color: #4caf50; 
-    width: 20%;  
-    height: 20%;
-    min-height: auto; 
-}
+    .table {
+        margin: auto;
+        background-color: #4caf50;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+    .social-media li{
+        display: inline;
+        min-width: 696px;
+        list-style: none;
+        padding-top: 10px
+        
+    }
+    .bottom{
+        text-align: center;
+    }
 
-/*About me section */
-.about {
-    position: absolute;
+    /*profile picture css*/
+    .profile-img {
+        width: 330px;
+        height: 380px;
+        border-radius: 30%;
+        border-style: dashed;
+        border-color: #4caf50;
+        position: relative;
+        display: inline-block; 
+    }
+
+    .gif {
+        position:relative;
+        display: inline-block;
+        left: 43%;
+        bottom: 140px;
+        border-radius: 30%;
+        border-style: dashed;
+        border-color: #4caf50; 
+        width: 20%;  
+        height: 20%;
+        min-height: auto; 
+    }
+
+    /*About me section */
+    .about {
+        position: absolute;
         z-index: 999;
         margin: 0 auto;
         left: 0;
@@ -108,77 +108,153 @@ header{
         top: 40%; 
         text-align: left;
         width: 40%;
-}
+    }
 
 
-/*timeline section*/
+    * {
+        box-sizing: border-box;
+      }
+      
+      
+      /* The actual timeline (the vertical ruler) */
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      /* The actual timeline (the vertical ruler) */
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: green;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+      
+      /* Container around content */
+      .container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+      
+      /* The circles on the timeline */
+      .container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      
+      /* Place the container to the left */
+      .left {
+        left: 0;
+      }
+      
+      /* Place the container to the right */
+      .right {
+        left: 50%;
+      }
+      
+      /* Add arrows to the left container (pointing right) */
+      .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+      }
+      
+      /* Add arrows to the right container (pointing left) */
+      .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+      
+      /* Fix the circle for containers on the right side */
+      .right::after {
+        left: -16px;
+      }
+      
+      /* The actual content */
+      .content {
+        padding: 20px 30px;
+        background-color: #4caf50;
+        position: relative;
+        border-radius: 120px;
+        border-style: dashed ;
+        border-color:orange;
+        text-align: center;
+      }
+      
+      /* Media queries - Responsive timeline on screens less than 600px wide */
+      @media screen and (max-width: 600px) {
+        /* Place the timelime to the left */
+        .timeline::after {
+        left: 31px;
+        }
+        
+        /* Full-width containers */
+        .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        }
+        
+        /* Make sure that all arrows are pointing leftwards */
+        .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+        }
+      
+        /* Make sure all circles are at the same spot */
+        .left::after, .right::after {
+        left: 15px;
+        }
+        
+        /* Make all right containers behave like the left ones */
+        .right {
+        left: 0%;
+        }
+      }
 
-.container{
-  width: 900px;
-  margin: 200px auto;
-}
-
-.timeline{
-  counter-reset: year 2013;
-  position: relative;
-}
-
-.timeline li{
-  list-style-type: none;
-  float: left;
-  width: 33.33%;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  font-family: 'Dosis', sans-serif;
-}
-
-ul:nth-child(1){
-  color: #4caf50;
-}
-
-.timeline li:before{
-  counter-increment: year;
-  content: counter(year);
-  width: 50px;
-  height: 50px;
-  border: 3px dashed #4caf50;
-  border-radius: 50%;
-  display: block;
-  text-align: center;
-  line-height: 50px;
-  margin: 0 auto 10px auto;
-  background: rgb(225, 193, 243); 
-  color: #000;
-  transition: all ease-in-out .3s;
-  cursor: pointer;
-}
-
-.timeline li:after{
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: grey;
-  top: 25px;
-  left: -45%;
-  z-index: -600;
-  transition: all ease-in-out .3s;
-}
-
-.timeline li:first-child:after{
-  content: none;
-}
-.timeline li.active{
-  color: #4caf50;
-}
-.timeline li.active:before {
-  background:rgb(225, 193, 243); 
-  color: #0d0e0d;
-}
 
 
-.timeline li.active + li:after {
-  background: #1e201f;
-}
+
+
+
+
+
+
+
+
+
+
+
 }
