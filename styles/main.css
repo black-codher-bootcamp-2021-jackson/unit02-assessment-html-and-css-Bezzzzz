@@ -177,5 +177,8 @@ ul:nth-child(1){
   color: #0d0e0d;
 }
 
+
 .timeline li.active + li:after {
-  background: #1e201f;}
+  background: #1e201f;
+}
+}
