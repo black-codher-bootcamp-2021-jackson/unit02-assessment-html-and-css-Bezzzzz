@@ -1,6 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5699f3e3-2e29-44d0-a4c0-351388a93cbe/deploy-status)](https://app.netlify.com/sites/berylcodes/deploys)
 
-
 # HTML and CSS Assessment
 
 For your unit 2 assessment you are required to create a website portfolio in HTML and CSS. As you progress throughout the course you are expected to continue adding and refining your portfolio, however by the due date of this assessment you must have what is stated in the [criteria](#assessment-criteria) pushed to your portfolio GitHub ready to be marked.
